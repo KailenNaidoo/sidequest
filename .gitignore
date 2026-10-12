@@ -1,0 +1,14 @@
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Agents / workflow artifacts
+.agents/
+
+# Kiro
+.kiro/

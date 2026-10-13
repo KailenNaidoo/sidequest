@@ -195,25 +195,10 @@
     <div class="portfolio-grid">
 
       <article class="work-card reveal">
-        <div class="mockup mockup--cv" aria-hidden="true">
-          <div class="mk-cv__sidebar">
-            <div class="mk-cv__avatar"></div>
-            <span class="mk-line mk-line--w60"></span>
-            <span class="mk-line mk-line--w80"></span>
-            <span class="mk-line mk-line--w40"></span>
-            <span class="mk-line mk-line--w70"></span>
-          </div>
-          <div class="mk-cv__main">
-            <div class="mk-cv__name"></div>
-            <span class="mk-line mk-line--w50 mk-accent"></span>
-            <span class="mk-line mk-line--w90"></span>
-            <span class="mk-line mk-line--w85"></span>
-            <span class="mk-line mk-line--w70"></span>
-            <span class="mk-line mk-line--w40 mk-accent"></span>
-            <span class="mk-line mk-line--w90"></span>
-            <span class="mk-line mk-line--w60"></span>
-          </div>
-        </div>
+        <button class="work-card__media" type="button" data-full="portfolio-cv.png" aria-label="View full CV Transformation before and after">
+          <img src="portfolio-cv.png" alt="CV Transformation before and after — a plain CV redesigned into a modern, professional layout" loading="lazy" />
+          <span class="work-card__zoom" aria-hidden="true">View full ↗</span>
+        </button>
         <div class="work-card__body">
           <h3>CV Transformation</h3>
           <p>Same experience. A stronger impression.</p>
@@ -221,14 +206,10 @@
       </article>
 
       <article class="work-card reveal">
-        <div class="mockup mockup--flyer" aria-hidden="true">
-          <span class="mk-fl__badge">R150</span>
-          <div class="mk-fl__photo"></div>
-          <div class="mk-fl__title">MIDNIGHT<br/>AUTO</div>
-          <span class="mk-line mk-line--w70 mk-light"></span>
-          <span class="mk-line mk-line--w50 mk-light"></span>
-          <span class="mk-fl__cta">BOOK NOW</span>
-        </div>
+        <button class="work-card__media" type="button" data-full="portfolio-flyer.png" aria-label="View full Midnight Auto Detailing flyer before and after">
+          <img src="portfolio-flyer.png" alt="Midnight Auto Detailing flyer before and after — a basic flyer redesigned into a bold, modern promotional design" loading="lazy" />
+          <span class="work-card__zoom" aria-hidden="true">View full ↗</span>
+        </button>
         <div class="work-card__body">
           <h3>Midnight Auto Detailing</h3>
           <p>Modern flyer and promotional design.</p>
@@ -236,15 +217,10 @@
       </article>
 
       <article class="work-card reveal">
-        <div class="mockup mockup--profile" aria-hidden="true">
-          <span class="mk-pr__chip"></span>
-          <div class="mk-pr__title">COMPANY<br/>PROFILE</div>
-          <span class="mk-pr__tag"></span>
-          <div class="mk-pr__block"></div>
-          <span class="mk-line mk-line--w80 mk-light"></span>
-          <span class="mk-line mk-line--w60 mk-light"></span>
-          <div class="mk-pr__bar"></div>
-        </div>
+        <button class="work-card__media" type="button" data-full="portfolio-profile.png" aria-label="View full Nova Cleaning Co. business profile before and after">
+          <img src="portfolio-profile.png" alt="Nova Cleaning Co. business profile before and after — a plain document transformed into a premium, branded company profile" loading="lazy" />
+          <span class="work-card__zoom" aria-hidden="true">View full ↗</span>
+        </button>
         <div class="work-card__body">
           <h3>Nova Cleaning Co.</h3>
           <p>Professional business profile.</p>
@@ -253,6 +229,12 @@
 
     </div>
   </section>
+
+  <!-- Lightbox for portfolio images -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Portfolio image viewer" hidden>
+    <button class="lightbox__close" id="lightboxClose" type="button" aria-label="Close image viewer">×</button>
+    <img class="lightbox__img" id="lightboxImg" src="" alt="" />
+  </div>
 
   <!-- ===== 4. LAUNCH PRICING ===== -->
   <section class="section pricing" id="pricing">

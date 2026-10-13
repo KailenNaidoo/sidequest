@@ -165,3 +165,42 @@ cards.forEach((card) => {
   card.addEventListener('pointerleave', reset);
   card.addEventListener('pointercancel', reset);
 });
+
+// Portfolio lightbox
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxClose = document.getElementById('lightboxClose');
+if (lightbox && lightboxImg && lightboxClose) {
+  let lastFocused = null;
+
+  const openLightbox = (src, alt) => {
+    lastFocused = document.activeElement;
+    lightboxImg.setAttribute('src', src);
+    lightboxImg.setAttribute('alt', alt || '');
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+    lightboxClose.focus();
+  };
+
+  const closeLightbox = () => {
+    lightbox.hidden = true;
+    lightboxImg.setAttribute('src', '');
+    document.body.style.overflow = '';
+    if (lastFocused && typeof lastFocused.focus === 'function') lastFocused.focus();
+  };
+
+  document.querySelectorAll('.work-card__media').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const img = btn.querySelector('img');
+      openLightbox(btn.getAttribute('data-full'), img ? img.getAttribute('alt') : '');
+    });
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !lightbox.hidden) closeLightbox();
+  });
+}

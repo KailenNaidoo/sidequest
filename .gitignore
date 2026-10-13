@@ -12,3 +12,8 @@ Thumbs.db
 
 # Kiro
 .kiro/
+
+# Node (used only for local image optimization)
+node_modules/
+package.json
+package-lock.json

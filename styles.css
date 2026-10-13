@@ -498,6 +498,24 @@ body {
 }
 .work-card { display: flex; flex-direction: column; }
 .work-card > * { position: relative; z-index: 1; }
+
+/* Portfolio overview banner */
+.portfolio__banner {
+  display: block;
+  width: 100%;
+  max-width: var(--maxw);
+  margin: 0 auto 30px;
+  padding: 0;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #0a0714;
+  cursor: pointer;
+  aspect-ratio: 16 / 9;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+.portfolio__banner img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out-soft); }
+.portfolio__banner:hover img { transform: scale(1.03); }
 /* Portfolio image media */
 .work-card__media {
   position: relative;
